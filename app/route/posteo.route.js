@@ -11,16 +11,16 @@ module.exports = function(app) {
    app.get('/posteos', posteo.findAll);
 
    // Traer la informacion de 1 post
-   app.get('/posteo/:posteoID', posteo.findByPk);
+   app.get('/posteo/:posteoId', posteo.findByPk);
 
    // Actualizar: editar un post existente
-   app.put('/posteo/:posteoID', posteo.update);
+   app.put('/posteo/:posteoId', posteo.update);
 
    // Borrar: Borrar un post existente
-   app.delete('/posteo/:posteoID', posteo.remove);
+   app.delete('/posteo/:posteoId', posteo.remove);
    
    // Bonus 1: Traer posts segun categoria
-   app.get('/posteos/categoria/:fk_categoriaId',posteo.findAllByCategoria)
+   app.get('/posteos/categoria/',posteo.findAllByCategoria)
 
 
 } 
